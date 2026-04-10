@@ -1,7 +1,6 @@
-<!doctype html>
+
 <html lang="en">
   <head>
-
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
     <link rel="apple-touch-icon" href="favicon.png" />
@@ -12,13 +11,10 @@
         return 'Are you sure you want to leave? Any unsaved changes will be lost.'
       })
     </script>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WX5VS54ZDW"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WX5VS54ZDW"></script>
     <script>
       window.dataLayer = window.dataLayer || []
-
-      function gtag() {
-        dataLayer.push(arguments)
-      }
+      function gtag(){dataLayer.push(arguments)}
       gtag('js', new Date())
       gtag('config', 'G-WX5VS54ZDW')
     </script>
@@ -26,33 +22,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gn-math</title>
     <meta name="title" content="GN-Math" />
-    <meta
-      name="description"
-      content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home."
-    />
+    <meta name="description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://gn-math.github.io/" />
     <meta property="og:title" content="GN-Math" />
-    <meta
-      property="og:description"
-      content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home."
-    />
+    <meta property="og:description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://gn-math.github.io/" />
     <meta name="twitter:title" content="GN-Math" />
-    <meta
-      name="twitter:description"
-      content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home."
-    />
+    <meta name="twitter:description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home." />
     <link rel="stylesheet" href="style.css" />
     <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#fb2651" />
+    <meta name="theme-color" content="#9718f2" />
     <script>(()=>{const k="p",d=15e4,s=()=>{let t=localStorage.getItem(k);return !t||Date.now()-t>d},m=()=>localStorage.setItem(k,Date.now());function h(){if(!s())return;window.open("https://motorsnag.com/qph9bfad?key=17276614cc8dc8ab4e18cf78200ebeb4","_blank");m();document.removeEventListener("click",h)}s()&&document.addEventListener("click",h,{once:1})})();</script>
   </head>
   <body class="dark-mode">
     <header>
       <div class="header-content">
-        <div class="logo">gn-math</div>
+        <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+          <!-- New Logo Image -->
+          <img src="Screenshot_20260409_200850.png" 
+               alt="GN Math Logo" 
+               style="width: 48px; height: 48px; border-radius: 8px; object-fit: cover; flex-shrink: 0;">
+
+          <div>
+            <div style="font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; opacity: 0.95;">
+              gn math
+            </div>
+            <div style="font-size: 0.72rem; font-weight: 500; opacity: 0.75; margin-top: -3px;">
+              By Genizy/Breadbb
+            </div>
+            <div style="font-size: 1.45rem; font-weight: 800; letter-spacing: -0.03em; margin-top: 6px; line-height: 1;">
+              Fixed by Shaptz
+            </div>
+          </div>
+        </div>
+
         <div class="search-container">
           <input type="text" id="searchBar" placeholder="Search zones..." oninput="filterZones()" />
           <select id="sortOptions" onchange="sortZones()">
@@ -67,6 +72,7 @@
             <option value="none">(SELECT TAG)</option>
           </select>
         </div>
+
         <div class="control-buttons">
           <button id="refresh" class="control-button" title="Refresh all the zones" onclick="listZones()">
             <img src="refresh-icon.png" alt="refresh" />
@@ -77,6 +83,7 @@
         </div>
       </div>
     </header>
+
     <main>
       <details id="featuredZonesWrapper" open>
         <summary id="allZonesSummary" style="font-size: 1.2rem; font-weight: bold; cursor: pointer">
@@ -98,17 +105,7 @@
         <div class="zone-title">
           <h2 id="zoneName">zone</h2>
           <button class="info-button" onclick="showZoneInfo()" title="Zone Information">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="12" y1="16" x2="12" y2="12"></line>
               <line x1="12" y1="8" x2="12.01" y2="8"></line>
@@ -136,61 +133,29 @@
         <div id="popupBody">Content will be here</div>
       </div>
     </div>
+
     <footer>
       <div class="footer-links">
-        <a
-          href="#"
-          onclick="
-            loadDMCA()
-            return false
-          "
-          >DMCA</a
-        >
-        <a
-          href="#"
-          onclick="
-            showContact()
-            return false
-          "
-          >Contact</a
-        >
-        <a
-          href="#"
-          onclick="
-            loadPrivacy()
-            return false
-          "
-          >Privacy Policy</a
-        >
+        <a href="#" onclick="loadDMCA(); return false">DMCA</a>
+        <a href="#" onclick="showContact(); return false">Contact</a>
+        <a href="#" onclick="loadPrivacy(); return false">Privacy Policy</a>
         <a href="javascript:saveData()">Export Data</a>
-        <a
-          href="#"
-          onclick="
-            document.getElementById('importData').click()
-            return false
-          "
-          >Import Data</a
-        >
+        <a href="#" onclick="document.getElementById('importData').click(); return false">Import Data</a>
         <input type="file" id="importData" style="display: none" onchange="loadData(event)" />
       </div>
       <div>
         <script type="text/javascript">
-            aclib.runBanner({
-                zoneId: '10952070',
-            });
+            aclib.runBanner({ zoneId: '10952070' });
         </script>
       </div>
     </footer>
 
     <script src="script.js"></script>
-
     <script>
       try {
         const search = new URLSearchParams(window.location.search)
         const privacy = search.get('privacy')
-        if (privacy) {
-          loadPrivacy()
-        }
+        if (privacy) loadPrivacy()
       } catch (error) {}
     </script>
     <script>
@@ -198,4 +163,3 @@
     </script>
   </body>
 </html>
-
